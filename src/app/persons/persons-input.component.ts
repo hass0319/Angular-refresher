@@ -12,7 +12,7 @@ export class PersonInputComponent {
 
   onCreatePerson() {
     console.log('created a person ' + this.enteredPersonName);
-    this.personCreate.emit(this.enteredPersonName);//method from eeventEmitter
+    this.personCreate.emit(this.enteredPersonName);//method from eventEmitter
     this.enteredPersonName = '';
 
   }

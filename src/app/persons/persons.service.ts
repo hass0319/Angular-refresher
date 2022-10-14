@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 
-@Injectable({ provideIn: 'root' })
+@Injectable({ provideIn: "root" })
 
 export class PersonsService {
   persons: string[] = ['Max', 'Manuel', 'Anna'];
