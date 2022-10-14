@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-Angular';
-  persons: string[] = ['Max', 'Manuel', 'Anna'];
-  onPersonCreated(name: string) {
-    this.persons.push(name);
-  }
+  // persons: string[] = ['Max', 'Manuel', 'Anna'];
+  // onPersonCreated(name: string) {
+  //   this.persons.push(name);
+  // }
 }
