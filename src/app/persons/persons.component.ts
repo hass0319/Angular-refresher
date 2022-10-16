@@ -11,6 +11,7 @@ export class PersonsComponent implements OnInit, OnDestroy {
   // persons: string[]=['Max', 'Manuel', 'Anna']
   // @Input() personList: string[] = [];
   personList: string[] = [];
+  isFetching = false
   private personListSubs: Subscription;
   // private prsService: PersonsService;
 
@@ -23,7 +24,10 @@ export class PersonsComponent implements OnInit, OnDestroy {
     this.personList = this.prsService.persons;
     this.personListSubs = this.prsService.personsChanged.subscribe(persons => {
       this.personList = persons;
+      this.isFetching = false;
     });
+    this.prsService.fetchPersons();
+    this.isFetching = true;
   }
 
   onRemovePerson(personName: string) {
