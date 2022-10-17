@@ -17,7 +17,7 @@ export class PersonsService {
       .pipe(
         map(
           resData => {
-            return resData.results.map(character => character.name)
+            return resData.results.map((character: { name: string; }) => character.name)
           }))
       .subscribe(
         transformedData => {

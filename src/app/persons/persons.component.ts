@@ -12,7 +12,7 @@ export class PersonsComponent implements OnInit, OnDestroy {
   // @Input() personList: string[] = [];
   personList: string[] = [];
   isFetching = false
-  private personListSubs: Subscription;
+  private personListSubs: Subscription = new Subscription;
   // private prsService: PersonsService;
 
   constructor(private prsService: PersonsService) {
